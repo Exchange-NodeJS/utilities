@@ -1,18 +1,35 @@
 {
-  "name": "utilities",
-  "version": "0.0.1",
+  "name": "@sync-markets/autilities",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "docs": "npx typedoc --entryPointStrategy expand --out docs src",
     "build": "pnpm run clean && tsc",
-    "clean": "rm -rf dist tsbuild.info",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
     "test": "vitest",
-    "publish": "pnpm run build && pnpm publish"
+    "export": "pnpm run build && pnpm publish --access public"
   },
-  "keywords": [],
-  "author": "Vera",
-  "license": "ISC",
+  "keywords": [
+    "typescript",
+    "npm",
+    "library",
+    "sync-markets"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+hhttps://github.com/SyncMarkets/utilities.git"
+  },
+  "author": "Vera <contact.vera0011@gmail.com>",
+  "license": "GNU GPLv3",
   "devDependencies": {
     "@types/node": "^22.7.4",
     "@typescript-eslint/eslint-plugin": "^8.8.0",

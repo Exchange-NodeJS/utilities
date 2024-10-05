@@ -7,7 +7,6 @@ export * from "./modules/classes/Logger";
 /**
  * Helpers exports
  */
-export * from "./modules/helpers/FormatterClass";
 export * from "./modules/helpers/SourceClass";
 
 /**
